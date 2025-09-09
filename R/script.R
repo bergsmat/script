@@ -15,7 +15,7 @@ script <- function() {
   this <- knitr::current_input()
   if(!(is.null(this))){
     if(file.exists(this)){
-      input <- sub('\\.rmarkdown$','.qmd', input)
+      this <- sub('\\.rmarkdown$','.qmd', this)
       return(normalizePath(this))
     }
   }
